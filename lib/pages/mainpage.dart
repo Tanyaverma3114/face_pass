@@ -1,0 +1,88 @@
+import 'dart:io';
+
+import 'package:face_net_authentication/pages/documents_form.dart';
+import 'package:face_net_authentication/pages/notes_form.dart';
+import 'package:face_net_authentication/pages/website_form.dart';
+import 'package:face_net_authentication/widgets/app_button.dart';
+import 'package:face_net_authentication/widgets/app_drawer.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'home.dart';
+import 'dart:math' as math;
+import 'card_form.dart';
+import 'website_form.dart';
+import 'documents_form.dart';
+import 'notes_form.dart';
+
+class Profile extends StatelessWidget {
+  const Profile(this.username, {Key key, this.imagePath}) : super(key: key);
+  final String username;
+  final String imagePath;
+  // final String githubURL =
+  //     "https://github.com/MCarlomagno/FaceRecognitionAuth/tree/master";
+  //
+  // void _launchURL() async => await canLaunch(githubURL)
+  //     ? await launch(githubURL)
+  //     : throw 'Could not launch $githubURL';
+  @override
+  Widget build(BuildContext context) {
+    final double mirror = math.pi;
+    return Scaffold(
+      backgroundColor: Colors.black,
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(
+          title: Text('Hey $username!'), backgroundColor: Colors.grey[850]),
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.add_event,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.4,
+        children: [
+          SpeedDialChild(
+              child: Icon(FontAwesomeIcons.stickyNote, color: Colors.white),
+              backgroundColor: Colors.grey[800],
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return NotesInputForm();
+                }));
+              }),
+          SpeedDialChild(
+              child: Icon(FontAwesomeIcons.file, color: Colors.white),
+              backgroundColor: Colors.grey[800],
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return DocumentsInputForm();
+                }));
+              }),
+          SpeedDialChild(
+              child: Icon(FontAwesomeIcons.globe, color: Colors.white),
+              backgroundColor: Colors.grey[800],
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return WebsiteDetailsInputForm();
+                }));
+              }),
+          SpeedDialChild(
+              child: Icon(FontAwesomeIcons.creditCard, color: Colors.white),
+              backgroundColor: Colors.grey[800],
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CardDetailsInputForm();
+                }));
+              }),
+        ],
+      ),
+      body: Center(
+        child: Container(
+          color: Colors.black,
+          child: Text('Add Credentials',
+              style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.grey)),
+        ),
+      ),
+    );
+  }
+}
