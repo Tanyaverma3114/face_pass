@@ -108,30 +108,20 @@ class _AuthActionButtonState extends State<AuthActionButton> {
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Color(0xFF0F0BDB),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              color: Colors.blue.withOpacity(0.1),
-              blurRadius: 1,
-              offset: Offset(0, 2),
-            ),
-          ],
+          borderRadius: BorderRadius.circular(100),
+          color: Colors.black,
         ),
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
-        width: MediaQuery.of(context).size.width * 0.8,
-        height: 60,
+        width: 80,
+        height: 80,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'CAPTURE',
-              style: TextStyle(color: Colors.white),
-            ),
-            SizedBox(
-              width: 10,
-            ),
+            // Text(
+            //   'CAPTURE',
+            //   style: TextStyle(color: Colors.lightBlue),
+            // ),
             Icon(Icons.camera_alt, color: Colors.white)
           ],
         ),
@@ -141,6 +131,7 @@ class _AuthActionButtonState extends State<AuthActionButton> {
 
   signSheet(context) {
     return Container(
+      color: Colors.black,
       padding: EdgeInsets.all(20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -149,17 +140,20 @@ class _AuthActionButtonState extends State<AuthActionButton> {
           widget.isLogin && predictedUser != null
               ? Container(
                   child: Text(
-                    'Welcome back, ' + predictedUser.user + '.',
-                    style: TextStyle(fontSize: 20),
+                    'Welcome back, ' + predictedUser.user + '!',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 )
               : widget.isLogin
                   ? Container(
                       child: Text(
                       'User not found 😞',
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ))
                   : Container(),
+          SizedBox(
+            height: 20,
+          ),
           Container(
             child: Column(
               children: [

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:face_net_authentication/pages/creditcard.dart';
 import 'package:face_net_authentication/pages/websites.dart';
-import 'package:face_net_authentication/pages/documents.dart';
 import 'package:face_net_authentication/pages/notes.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -34,12 +33,6 @@ class NavigationDrawerWidget extends StatelessWidget {
                     text: 'Websites',
                     icon: FontAwesomeIcons.globe,
                     onClicked: () => selectedItem(context, 1),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Documents',
-                    icon: FontAwesomeIcons.file,
-                    onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
@@ -93,11 +86,6 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 1:
         Navigator.push(context, MaterialPageRoute(builder: (context) {
           return Websites();
-        }));
-        break;
-      case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return Documents();
         }));
         break;
       case 3:

@@ -4,7 +4,6 @@ class AppButton extends StatelessWidget {
   AppButton(
       {this.onPressed,
       this.text,
-      this.color = const Color(0xFF000000),
       this.icon = const Icon(
         Icons.add,
         color: Colors.lightBlue,
@@ -12,16 +11,14 @@ class AppButton extends StatelessWidget {
   final Function onPressed;
   final String text;
   final Icon icon;
-  final Color color;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.073),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: color,
+          color: Colors.blue,
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Colors.black,
@@ -31,20 +28,19 @@ class AppButton extends StatelessWidget {
           ],
         ),
         alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
-        width: MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.width * 0.2,
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: MediaQuery.of(context).size.width * 0.16,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              text,
-              style: TextStyle(color: Colors.lightBlue),
-            ),
+            icon,
             SizedBox(
               width: 10,
             ),
-            icon
+            Text(
+              text,
+              style: TextStyle(color: Colors.white),
+            ),
           ],
         ),
       ),

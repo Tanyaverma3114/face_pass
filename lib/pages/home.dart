@@ -63,32 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: Container(),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        actions: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(right: 20, top: 20),
-            child: PopupMenuButton<String>(
-              child: Icon(
-                Icons.more_vert,
-                color: Colors.cyan,
-              ),
-              onSelected: (value) {
-                switch (value) {
-                  case 'Clear DB':
-                    _dataBaseService.cleanDB();
-                    break;
-                }
-              },
-              itemBuilder: (BuildContext context) {
-                return {'Clear DB'}.map((String choice) {
-                  return PopupMenuItem<String>(
-                    value: choice,
-                    child: Text(choice),
-                  );
-                }).toList();
-              },
-            ),
-          ),
-        ],
       ),
       body: !loading
           ? SafeArea(
@@ -134,8 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.black,
-                              border: Border.all(width: 2, color: Colors.grey),
+                              color: Colors.lightBlueAccent,
+                              // border: Border.all(width: 2, color: Colors.grey),
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blue.withOpacity(0.1),
@@ -147,17 +121,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             alignment: Alignment.center,
                             padding: EdgeInsets.symmetric(
                                 vertical: 14, horizontal: 16),
-                            width: MediaQuery.of(context).size.width * 0.8,
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.width * 0.16,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Icon(Icons.login, color: Colors.lightBlue),
+                                Icon(Icons.login, color: Colors.white),
                                 SizedBox(
                                   width: 10,
                                 ),
                                 Text(
                                   'LOGIN',
-                                  style: TextStyle(color: Colors.lightBlue),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ),
@@ -180,8 +155,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.black,
-                              border: Border.all(width: 2, color: Colors.grey),
+                              color: Colors.blue[600],
+                              // border: Border.all(width: 2, color: Colors.grey),
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blue.withOpacity(0.1),
@@ -193,17 +168,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             alignment: Alignment.center,
                             padding: EdgeInsets.symmetric(
                                 vertical: 14, horizontal: 16),
-                            width: MediaQuery.of(context).size.width * 0.8,
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.width * 0.16,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Icon(Icons.person_add, color: Colors.lightBlue),
+                                Icon(Icons.person_add, color: Colors.white),
                                 SizedBox(
                                   width: 10,
                                 ),
                                 Text(
                                   'SIGN UP',
-                                  style: TextStyle(color: Colors.lightBlue),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ),

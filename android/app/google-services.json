@@ -1,35 +1,41 @@
 {
   "project_info": {
-    "project_number": "908209109268",
-    "firebase_url": "https://facerecognitionauth.firebaseio.com",
-    "project_id": "facerecognitionauth",
-    "storage_bucket": "facerecognitionauth.appspot.com"
+    "project_number": "834805387454",
+    "project_id": "facepass-da382",
+    "storage_bucket": "facepass-da382.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:908209109268:android:22aa62a69fde9e6a0e6a01",
+        "mobilesdk_app_id": "1:834805387454:android:761ae6c206ff74411cceef",
         "android_client_info": {
           "package_name": "com.example.FaceNet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "908209109268-8833dnentno68sbhh1q3sbd5k0epm8a3.apps.googleusercontent.com",
+          "client_id": "834805387454-nablj8k34b5t2en2mh2p6b7d49ogsusn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDzlmpvIAirzjtO_1TDasHocRk3UrTrkig"
+          "current_key": "AIzaSyB8fJ4KQRRuwVgTFLrE682dU6IhDLy9vkg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "908209109268-8833dnentno68sbhh1q3sbd5k0epm8a3.apps.googleusercontent.com",
+              "client_id": "834805387454-nablj8k34b5t2en2mh2p6b7d49ogsusn.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "834805387454-08d36h036jltb2o11crt3s9u28clqfrr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.FaceNet"
+              }
             }
           ]
         }

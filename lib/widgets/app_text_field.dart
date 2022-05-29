@@ -19,23 +19,34 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: TextStyle(color: Colors.white),
       controller: this.controller,
       autofocus: this.autofocus,
-      cursorColor: Color(0xFF5BC8AA),
+      cursorColor: Colors.lightBlue,
       decoration: InputDecoration(
+        label: Text(
+          labelText,
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.grey,
+          ),
+        ),
         floatingLabelBehavior: FloatingLabelBehavior.never,
-        labelText: labelText,
         border: InputBorder.none,
         filled: true,
-        fillColor: Colors.grey[200],
         enabledBorder: new OutlineInputBorder(
-          borderSide: BorderSide.none,
+          borderSide: BorderSide(
+            color: Colors.grey,
+          ),
           borderRadius: const BorderRadius.all(
             const Radius.circular(10.0),
           ),
         ),
         focusedBorder: new OutlineInputBorder(
-          borderSide: BorderSide.none,
+          borderSide: BorderSide(
+            width: 2,
+            color: Colors.lightBlue,
+          ),
           borderRadius: const BorderRadius.all(
             const Radius.circular(10.0),
           ),

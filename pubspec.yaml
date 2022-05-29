@@ -158,7 +158,11 @@ dependencies:
   image: ^3.0.2
   font_awesome_flutter: ^9.0.0
   flutter_speed_dial: ^4.3.0
+  fluttertoast: ^8.0.9
   url_launcher: ^6.0.3
+  firebase_core: ^1.15.0
+  firebase_auth: ^3.3.16
+  cloud_firestore: ^3.1.13
 
 dev_dependencies:
   flutter_test:

@@ -17,12 +17,16 @@ class CameraHeader extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(100),
               ),
               height: 50,
               width: 50,
-              child: Center(child: Icon(Icons.arrow_back)),
+              child: Center(
+                  child: Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+              )),
             ),
           ),
           Text(

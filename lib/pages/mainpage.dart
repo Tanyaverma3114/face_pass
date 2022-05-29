@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:face_net_authentication/pages/documents_form.dart';
 import 'package:face_net_authentication/pages/notes_form.dart';
 import 'package:face_net_authentication/pages/website_form.dart';
 import 'package:face_net_authentication/widgets/app_button.dart';
@@ -13,7 +12,6 @@ import 'home.dart';
 import 'dart:math' as math;
 import 'card_form.dart';
 import 'website_form.dart';
-import 'documents_form.dart';
 import 'notes_form.dart';
 
 class Profile extends StatelessWidget {
@@ -45,14 +43,6 @@ class Profile extends StatelessWidget {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return NotesInputForm();
-                }));
-              }),
-          SpeedDialChild(
-              child: Icon(FontAwesomeIcons.file, color: Colors.white),
-              backgroundColor: Colors.grey[800],
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return DocumentsInputForm();
                 }));
               }),
           SpeedDialChild(
