@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         children: [
                           Text(
-                            "FACE PASS",
+                            "FacePass",
                             style: TextStyle(
                                 fontSize: 30,
                                 color: Colors.lightBlue,

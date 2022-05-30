@@ -1,15 +1,20 @@
+import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:face_net_authentication/widgets/card_widget.dart';
 import 'package:face_net_authentication/widgets/text_input_field.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class WebsiteDetailsInputForm extends StatelessWidget {
+  final FirebaseFirestore _firebase = FirebaseFirestore.instance;
   final _websiteFields = [
     'Website URL',
     'Username',
     'Password',
   ];
+  // bool allFieldsFilled;
+  List<dynamic> _websiteFieldValues = [null, null, null];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +31,11 @@ class WebsiteDetailsInputForm extends StatelessWidget {
           backgroundColor: Colors.grey[850]),
       floatingActionButton: FloatingActionButton(
           onPressed: () async {
+            await _firebase.collection('credentials').add({
+              'Website URL': _websiteFieldValues[0],
+              'Username': _websiteFieldValues[1],
+              'Password': _websiteFieldValues[2],
+            });
             Navigator.pop(context);
             await Fluttertoast.showToast(
               msg: 'New Credentials Added',
@@ -33,7 +43,7 @@ class WebsiteDetailsInputForm extends StatelessWidget {
             );
           },
           child: Icon(FontAwesomeIcons.check),
-          backgroundColor: Colors.lightBlue),
+          backgroundColor: Colors.lightBlueAccent),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Flexible(
@@ -41,7 +51,12 @@ class WebsiteDetailsInputForm extends StatelessWidget {
             shrinkWrap: true,
             itemCount: _websiteFields.length,
             itemBuilder: (listViewContext, index) {
-              return TextInputField(hintText: _websiteFields[index]);
+              return TextInputField(
+                hintText: _websiteFields[index],
+                onChanged: (value) {
+                  _websiteFieldValues[index] = value;
+                },
+              );
             },
           ),
         ),

@@ -1,11 +1,15 @@
 import 'dart:ffi';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
+import 'package:face_net_authentication/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class NotesInputForm extends StatelessWidget {
+  // CollectionReference notes = FirebaseFirestore.instance.collection('notes');
+  FirebaseFirestore _firebase = FirebaseFirestore.instance;
+  String textNote;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +26,7 @@ class NotesInputForm extends StatelessWidget {
           backgroundColor: Colors.grey[850]),
       floatingActionButton: FloatingActionButton(
           onPressed: () async {
+            await _firebase.collection('notes').add({'Note': textNote});
             Navigator.pop(context);
             await Fluttertoast.showToast(
               msg: 'New Note Added',
@@ -29,7 +34,7 @@ class NotesInputForm extends StatelessWidget {
             );
           },
           child: Icon(FontAwesomeIcons.check),
-          backgroundColor: Colors.lightBlue),
+          backgroundColor: Colors.lightBlueAccent),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: TextField(
@@ -61,7 +66,9 @@ class NotesInputForm extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
           ),
-          onChanged: (value) {},
+          onChanged: (value) {
+            textNote = value;
+          },
         ),
       ),
     );

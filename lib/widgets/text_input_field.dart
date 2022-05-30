@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TextInputField extends StatelessWidget {
   final String hintText;
-  TextInputField({@required this.hintText});
+  Function onChanged;
+  TextInputField({@required this.hintText, @required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class TextInputField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),
-        onChanged: (value) {},
+        onChanged: onChanged,
       ),
     );
   }

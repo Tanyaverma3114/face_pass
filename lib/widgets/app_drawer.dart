@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:face_net_authentication/pages/home.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:face_net_authentication/pages/creditcard.dart';
@@ -13,7 +14,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Colors.grey[900],
+        color: Colors.blue[600],
         child: ListView(
           children: <Widget>[
             Container(
@@ -22,7 +23,31 @@ class NavigationDrawerWidget extends StatelessWidget {
                 children: [
                   // const SizedBox(height: 12),
                   // buildSearchField(),
-                  const SizedBox(height: 24),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'FacePass',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 25),
+                        ),
+                        Text(
+                          'Secure Password Manager',
+                          style: TextStyle(
+                              color: Colors.black45,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 20),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Divider(
+                    color: Colors.white70,
+                  ),
                   buildMenuItem(
                     text: 'Bank Cards',
                     icon: FontAwesomeIcons.creditCard,
@@ -44,11 +69,12 @@ class NavigationDrawerWidget extends StatelessWidget {
                   Divider(
                     color: Colors.white70,
                   ),
-                  const SizedBox(height: 24),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Logout',
                     icon: Icons.logout,
+                    textColor: Colors.red[900],
+                    iconColor: Colors.red[900],
                     onClicked: () => selectedItem(context, 4),
                   ),
                 ],
@@ -64,13 +90,15 @@ class NavigationDrawerWidget extends StatelessWidget {
     String text,
     IconData icon,
     VoidCallback onClicked,
+    Color textColor,
+    Color iconColor,
   }) {
-    final color = Colors.white;
     final hoverColor = Colors.white70;
 
     return ListTile(
-      leading: Icon(icon, color: color),
-      title: Text(text, style: TextStyle(color: color)),
+      textColor: textColor,
+      leading: Icon(icon, color: iconColor),
+      title: Text(text, style: TextStyle(color: textColor, fontSize: 18)),
       hoverColor: hoverColor,
       onTap: onClicked,
     );

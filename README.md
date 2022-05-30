@@ -1,4 +1,5 @@
 # FacePass - Your face-protected password vault
+### <a href = "https://drive.google.com/file/d/1oJB8Y4eBdmj785g1nVlktg9exFQuDUFX/view?usp=sharing" >Video Demo</a>
 ## About The Project:
 * Face Pass mobile application was built during Microsoft Engage 2022.
 * It is a Password Manager app where users can store their credentials and important documents.
@@ -54,22 +55,47 @@ To install and run the project on your local system, following are the requireme
 * First signup through face detection and enter name and password.
 * Login to the app through face recognition and authentication and enter the password.
 
-<img src="Images/mainpage.jpg" alt="Landing Page" height="500">
-<img src="Images/signup.jpg" alt="Signup page" height="500">
-<img src="Images/login.jpg" alt="Login Page" height="500">
+<img src="Images/landing.jpeg" alt="Landing Page" height="500">
+<img src="Images/signup.jpeg" alt="Sign up Page" height="500">
+<img src="Images/login.jpeg" alt="Login Page" height="500">
 
 ### Home Page
-* The Home page has a drawer
+* The Home page has a drawer and an add button. An user can add their important notes, website and bank card details directly by clicking on the floating add button.
+* The drawer has the options of Bank Cards, Websites, Notes and Logout.
 
+<img src="Images/home2.jpeg" alt="Home Page" height="500">
+<img src="Images/home.jpeg" alt="Add Details" height="500">
+<img src="Images/drawer.jpeg" alt="Drawer" height="500">
 
 ### Bank Cards
+* The 'Bank Cards' option in the drawer is the place where an user can check all the saved cards.
+* It also has a floating add button through which an user can add details of other cards.
+  
+<img src="Images/bankcard.jpeg" alt="Bank Cards" height="500">
+<img src="Images/bankcard2.jpeg" alt="Add Card Details" height="500">
+
 ### Websites
+* The 'Websites' option in the drawer is the place where an user can check all the credentials of different websites saved by them.
+* It also has a floating add button through which an user can add credentials of other websites.
+
+<img src="Images/websites.jpeg" alt="Websites" height="500">
+<img src="Images/websites3.jpeg" alt="Add Website Details" height="500">
+
 ### Notes
+* The 'Notes' option in the drawer is the place where an user can check all the saved notes.
+* It also has a floating add button through which an user can add new notes.
+
+<img src="Images/note.jpeg" alt="Notes" height="500">
+<img src="Images/note2.jpeg" alt="Add Notes" height="500">
+
 ### Logout
- 
+* The 'Logout' option in the drawer logs out the user.
+
+<img src="Images/drawer.jpeg" alt="Logout" height="500">
+
 ## Resources Used:
 * https://youtu.be/Ib2FlirtcmE		
-* Face Recognition Authentication using Flutter and Tensorflow Lite | by Marcos Carlomagno | Analytics Vidhya | Medium
+* https://medium.com/analytics-vidhya/face-recognition-authentication-using-flutter-and-tensorflow-lite-2659d941d56e
 * https://github.com/MCarlomagno/FaceRecognitionAuth
 * https://youtu.be/2aSbeSun7K4
  
