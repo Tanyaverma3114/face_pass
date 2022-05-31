@@ -7,9 +7,10 @@
 * Face Pass mobile application was built during Microsoft Engage 2022.
 * It is a Password Manager app where users can store their credentials and important documents.
 ### Salient Features:
-* User recognition and authentication via Tensorflow Lite.
-* Adding and deleting bank cards and websites login credentials.
-* Uploading and deleting important documents and notes.
+* User authentication using Face ID via Tensorflow Lite.
+* Adding bank cards and websites login credentials.
+* Storing important notes.
+* The data is stored on the cloud to access from any device.
 ### Compatible With:
 Android and iOS devices
  
@@ -25,6 +26,20 @@ Android and iOS devices
   
   TensorFlow Lite plugin provides a dart API for accessing TensorFlow Lite interpreter and performing inference. It binds to TensorFlow Lite C API using dart:ffi.
 
+### Flutter packages/dependencies:
+* tflite_flutter
+* camera
+* google_ml_kit
+* image
+* get_it
+* sqflite
+* tflite
+* flutter_speed_dial
+* fluttertoast
+* firebase_core
+* firebase_auth
+* cloud_firestore
+* flutter_launcher_icons
 ## Agile Methodology:
 ### What is Agile Methodology:
 Agile is a development methodology adopted by the software industry. It is an iterative approach to software development. It promotes teamwork. It’s centered around adaptive planning, self-organization, and short delivery times. It’s flexible, fast, and aims for continuous improvements in quality, using tools like Scrum and eXtreme Programming.
@@ -37,7 +52,7 @@ SCRUM is a subset of Agile, a framework for developing software. SCRUM takes adv
 To install and run the project on your local system, following are the requirements:
 * Ensure that the device uses Android or iOS.
 * Ensure that the device has a front camera to detect the face.
-### Setup
+### Setup:
 1- Clone the repository:
 
 ``` git clone https://github.com/Tanyaverma3114/face_pass.git ```
@@ -54,7 +69,7 @@ To install and run the project on your local system, following are the requireme
  
  
 ## Navigating Through The App:
-### Login/ Signup
+### Login/ Signup:
 * First signup through face detection and enter name and password.
 * Login to the app through face recognition and authentication and enter the password.
 
@@ -62,7 +77,7 @@ To install and run the project on your local system, following are the requireme
 <img src="Images/signup.jpeg" alt="Sign up Page" height="500">
 <img src="Images/login.jpeg" alt="Login Page" height="500">
 
-### Home Page
+### Home Page:
 * The Home page has a drawer and an add button. An user can add their important notes, website and bank card details directly by clicking on the floating add button.
 * The drawer has the options of Bank Cards, Websites, Notes and Logout.
 
@@ -70,28 +85,28 @@ To install and run the project on your local system, following are the requireme
 <img src="Images/home_page2.jpeg" alt="Add Details" height="500">
 <img src="Images/home_page3.jpeg" alt="Drawer" height="500">
 
-### Bank Cards
+### Bank Cards:
 * The 'Bank Cards' option in the drawer is the place where an user can check all the saved cards.
 * It also has a floating add button through which an user can add details of other cards.
   
 <img src="Images/bankcard.jpeg" alt="Bank Cards" height="500">
 <img src="Images/bankcard2.jpeg" alt="Add Card Details" height="500">
 
-### Websites
+### Websites:
 * The 'Websites' option in the drawer is the place where an user can check all the credentials of different websites saved by them.
 * It also has a floating add button through which an user can add credentials of other websites.
 
 <img src="Images/websites.jpeg" alt="Websites" height="500">
 <img src="Images/websites3.jpeg" alt="Add Website Details" height="500">
 
-### Notes
+### Notes:
 * The 'Notes' option in the drawer is the place where an user can check all the saved notes.
 * It also has a floating add button through which an user can add new notes.
 
 <img src="Images/note.jpeg" alt="Notes" height="500">
 <img src="Images/note2.jpeg" alt="Add Notes" height="500">
 
-### Logout
+### Logout:
 * The 'Logout' option in the drawer logs out the user.
 
 <img src="Images/logout.jpeg" alt="Logout" height="500">
