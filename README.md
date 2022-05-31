@@ -94,7 +94,7 @@ To install and run the project on your local system, following are the requireme
 ### Logout
 * The 'Logout' option in the drawer logs out the user.
 
-<img src="Images/Drawer.jpeg" alt="Logout" height="500">
+<img src="Images/home_page3.jpeg" alt="Logout" height="500">
 
 ## Resources Used:
 * https://youtu.be/Ib2FlirtcmE		
