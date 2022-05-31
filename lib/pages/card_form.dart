@@ -61,19 +61,17 @@ class CardDetailsInputForm extends StatelessWidget {
           backgroundColor: Colors.lightBlueAccent),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: Flexible(
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: _cardFields.length,
-            itemBuilder: (listViewContext, index) {
-              return TextInputField(
-                hintText: _cardFields[index],
-                onChanged: (value) {
-                  _cardFieldValues[index] = value;
-                },
-              );
-            },
-          ),
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: _cardFields.length,
+          itemBuilder: (listViewContext, index) {
+            return TextInputField(
+              hintText: _cardFields[index],
+              onChanged: (value) {
+                _cardFieldValues[index] = value;
+              },
+            );
+          },
         ),
       ),
     );

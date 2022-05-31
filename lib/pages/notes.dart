@@ -31,7 +31,7 @@ class _NotesState extends State<Notes> {
             for (var note in notesList) {
               String notesText = note.get('Note');
               final notesWidget = ReusableCard(
-                colour: Colors.black,
+                colour: Colors.grey[850],
                 cardChild: Text(
                   notesText,
                   style: TextStyle(
@@ -66,8 +66,8 @@ class _NotesState extends State<Notes> {
                   );
           }
           return Container(
-            child: Text('You have not added any notes yet.'),
-          );
+              // child: Text('You have not added any notes yet.'),
+              );
         },
       ),
       floatingActionButton: FloatingActionButton(
@@ -76,7 +76,7 @@ class _NotesState extends State<Notes> {
               return NotesInputForm();
             }));
           },
-          child: Icon(FontAwesomeIcons.plus),
+          child: Icon(FontAwesomeIcons.plus, size: 16),
           backgroundColor: Colors.lightBlueAccent),
     );
   }

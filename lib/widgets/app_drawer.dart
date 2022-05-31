@@ -62,7 +62,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Notes',
-                    icon: FontAwesomeIcons.stickyNote,
+                    icon: FontAwesomeIcons.solidStickyNote,
                     onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 24),

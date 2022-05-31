@@ -34,7 +34,7 @@ class _WebsitesState extends State<Websites> {
               String websitesURL = website.get('Website URL');
               String password = website.get('Password');
               final websitesWidget = ReusableCard(
-                colour: Colors.black,
+                colour: Colors.grey[850],
                 cardChild: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -111,14 +111,14 @@ class _WebsitesState extends State<Websites> {
                 : ListView.builder(
                     shrinkWrap: true,
                     itemCount: websitesWidgets.length,
-                    itemBuilder: (listViewContext, index) {
+                    itemBuilder: (context, index) {
                       return websitesWidgets[index];
                     },
                   );
           }
           return Container(
-            child: Text('You have not added any credentials yet.'),
-          );
+              // child: Text('You have not added any credentials yet.'),
+              );
         },
       ),
       floatingActionButton: FloatingActionButton(
@@ -127,7 +127,7 @@ class _WebsitesState extends State<Websites> {
               return WebsiteDetailsInputForm();
             }));
           },
-          child: Icon(FontAwesomeIcons.plus),
+          child: Icon(FontAwesomeIcons.plus, size: 16),
           backgroundColor: Colors.lightBlueAccent),
     );
   }

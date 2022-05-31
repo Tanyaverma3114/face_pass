@@ -42,8 +42,8 @@ class _CreditcardState extends State<CreditCard> {
               String cardHolder = cards.get('Card Holder');
               String validThrough = cards.get('Valid Through');
               String cardType = cards.get('Card Type');
-              int pin = cards.get('PIN');
-              int cvv = cards.get('CVV');
+              String pin = cards.get('PIN');
+              String cvv = cards.get('CVV');
               final cardsWidget = ReusableCard(
                 colour: Colors.grey[850],
                 cardChild: Column(
@@ -100,7 +100,7 @@ class _CreditcardState extends State<CreditCard> {
                                   TextStyle(color: Colors.grey, fontSize: 16),
                             ),
                             Text(
-                              pin.toString(),
+                              pin,
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -126,7 +126,7 @@ class _CreditcardState extends State<CreditCard> {
                                   TextStyle(color: Colors.grey, fontSize: 16),
                             ),
                             Text(
-                              cvv.toString(),
+                              cvv,
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -157,14 +157,14 @@ class _CreditcardState extends State<CreditCard> {
                 : ListView.builder(
                     shrinkWrap: true,
                     itemCount: cardsWidgets.length,
-                    itemBuilder: (listViewContext, index) {
+                    itemBuilder: (context, index) {
                       return cardsWidgets[index];
                     },
                   );
           }
           return Container(
-            child: Text('You have not added any cards yet.'),
-          );
+              // child: Text('You have not added any cards yet.'),
+              );
         },
       ),
       floatingActionButton: FloatingActionButton(
@@ -173,7 +173,7 @@ class _CreditcardState extends State<CreditCard> {
               return CardDetailsInputForm();
             }));
           },
-          child: Icon(FontAwesomeIcons.plus),
+          child: Icon(FontAwesomeIcons.plus, size: 16),
           backgroundColor: Colors.lightBlueAccent),
     );
   }

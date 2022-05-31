@@ -13,15 +13,22 @@ import 'dart:math' as math;
 import 'card_form.dart';
 import 'website_form.dart';
 import 'notes_form.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:face_net_authentication/widgets/card_widget.dart';
+import 'creditcard.dart';
+import 'notes.dart';
+import 'websites.dart';
 
 class Profile extends StatelessWidget {
-  const Profile(this.username, {Key key, this.imagePath}) : super(key: key);
+  Profile(this.username, {Key key, this.imagePath}) : super(key: key);
   final String username;
   final String imagePath;
+  final FirebaseFirestore _firebase = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
     final double mirror = math.pi;
+
     return Scaffold(
       backgroundColor: Colors.black,
       drawer: NavigationDrawerWidget(),
@@ -59,16 +66,108 @@ class Profile extends StatelessWidget {
               }),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.all(70),
-        child: Center(
-          child: Text(
-            'Add Entries',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Colors.grey, fontSize: 20, fontWeight: FontWeight.w300),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Expanded(
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CreditCard()));
+              },
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.creditCard,
+                      size: 60,
+                    ),
+                    Divider(),
+                    Text(
+                      'BANK CARDS',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+            child: Divider(
+              height: 0,
+              color: Colors.grey[850],
+              thickness: 2,
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Websites()));
+              },
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.globe,
+                      size: 60,
+                    ),
+                    Divider(),
+                    Text(
+                      'WEBSITES',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
+            child: Divider(
+              height: 0,
+              color: Colors.grey[850],
+              thickness: 2,
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Notes()));
+              },
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.solidStickyNote,
+                      size: 60,
+                    ),
+                    Divider(),
+                    Text(
+                      'NOTES',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

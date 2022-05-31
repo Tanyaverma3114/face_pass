@@ -46,19 +46,17 @@ class WebsiteDetailsInputForm extends StatelessWidget {
           backgroundColor: Colors.lightBlueAccent),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: Flexible(
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: _websiteFields.length,
-            itemBuilder: (listViewContext, index) {
-              return TextInputField(
-                hintText: _websiteFields[index],
-                onChanged: (value) {
-                  _websiteFieldValues[index] = value;
-                },
-              );
-            },
-          ),
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: _websiteFields.length,
+          itemBuilder: (listViewContext, index) {
+            return TextInputField(
+              hintText: _websiteFields[index],
+              onChanged: (value) {
+                _websiteFieldValues[index] = value;
+              },
+            );
+          },
         ),
       ),
     );
