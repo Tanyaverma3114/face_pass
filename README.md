@@ -66,9 +66,9 @@ To install and run the project on your local system, following are the requireme
 * The Home page has a drawer and an add button. An user can add their important notes, website and bank card details directly by clicking on the floating add button.
 * The drawer has the options of Bank Cards, Websites, Notes and Logout.
 
-<img src="Images/Home.jpeg" alt="Home Page" height="500">
-<img src="Images/Home2.jpeg" alt="Add Details" height="500">
-<img src="Images/Drawer.jpeg" alt="Drawer" height="500">
+<img src="Images/home_page.jpeg" alt="Home Page" height="500">
+<img src="Images/home_page2.jpeg" alt="Add Details" height="500">
+<img src="Images/home_page3.jpeg" alt="Drawer" height="500">
 
 ### Bank Cards
 * The 'Bank Cards' option in the drawer is the place where an user can check all the saved cards.
