@@ -2,7 +2,7 @@
 ### <a href = "https://drive.google.com/file/d/1oJB8Y4eBdmj785g1nVlktg9exFQuDUFX/view?usp=sharing" >Video Demo</a> . <a href = "https://drive.google.com/file/d/1kSHhKwFmTnzDdMb5khjn3wFIvUCpu3PH/view?usp=sharing" >APK Download Link</a>
 ## Problem Statement:
 * Develop a web or a  mobile application to demonstrate the application of Face Recognition technology.
-* Solution: Today people have many credentials, bank cards, and important notes that they can't remember the details of. They can't write the credentials anywhere as it is a threat to the security of the credentials. With FacePass, users can keep their credentials safe are it requires face recognition and authentication. It also asks for the password during the login after face authentication, making it highly secure. 
+* Solution: Today people have many credentials, bank cards, and important notes that they can't remember the details of. They can't write the credentials anywhere as it is a threat to the security of the credentials. With FacePass, users can keep their credentials safe as it requires face recognition and authentication. It also asks for the password during the login after face authentication, making it highly secure. 
 ## About The Project:
 * Face Pass mobile application was built during Microsoft Engage 2022.
 * It is a Password Manager app where users can store their credentials and important notes.
