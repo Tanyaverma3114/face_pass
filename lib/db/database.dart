@@ -38,5 +38,6 @@ class DataBaseService {
     String userAndPass = user + ':' + password;
     _db[userAndPass] = modelData;
     jsonFile.writeAsStringSync(json.encode(_db));
+    
   }
 }
