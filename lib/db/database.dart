@@ -39,10 +39,4 @@ class DataBaseService {
     _db[userAndPass] = modelData;
     jsonFile.writeAsStringSync(json.encode(_db));
   }
-
-  /// deletes the created users
-  cleanDB() {
-    this._db = Map<String, dynamic>();
-    jsonFile.writeAsStringSync(json.encode({}));
-  }
 }
