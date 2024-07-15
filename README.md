@@ -110,12 +110,6 @@ To install and run the project on your local system, following are the requireme
 * The 'Logout' option in the drawer logs out the user.
 
 <img src="Images/logout.jpeg" alt="Logout" height="500">
-
-## Resources Used:
-* https://youtu.be/Ib2FlirtcmE		
-* https://medium.com/analytics-vidhya/face-recognition-authentication-using-flutter-and-tensorflow-lite-2659d941d56e
-* https://github.com/MCarlomagno/FaceRecognitionAuth
-* https://youtu.be/2aSbeSun7K4
  
  
 
